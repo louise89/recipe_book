@@ -1,0 +1,24 @@
+<h1>All recipes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Servings</th>
+    <th>Time</th>
+    <th>Ingredients</th>
+    <th>Method</th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @recipes.each do |recipe| %>
+    <tr>
+      <td><%= recipe.title %></td>
+      <td><%= recipe.servings %></td>
+      <td><%= recipe.time %></td>
+      <td><%= recipe.ingredients %></td>
+      <td><%= recipe.method %></td>
+      <td><%= link_to 'Show', recipe_path(recipe) %></td>
+      <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+    </tr>
+  <% end %>
+</table>
