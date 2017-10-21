@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021025923) do
+ActiveRecord::Schema.define(version: 20171021050058) do
 
   create_table "cooking_methods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "action"
@@ -44,8 +44,6 @@ ActiveRecord::Schema.define(version: 20171021025923) do
     t.string "title"
     t.string "servings"
     t.string "time"
-    t.text "ingredients"
-    t.text "method"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
