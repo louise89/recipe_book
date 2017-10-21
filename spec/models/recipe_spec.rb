@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Recipe, :type => :model do
 recipe = (
-  described_class.new(title: "Test1", servings: "10", time: "10",
-    ingredients: "Potatoes", method: "potatoes")
+  described_class.new(title: "Test1", servings: "10", time: "10")
   )
 
   it "is valid with valid attributes" do
