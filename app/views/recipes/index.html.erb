@@ -5,8 +5,6 @@
     <th>Title</th>
     <th>Servings</th>
     <th>Time</th>
-    <th>Ingredients</th>
-    <th>Method</th>
     <th colspan="2"></th>
   </tr>
 
@@ -15,8 +13,6 @@
       <td><%= recipe.title %></td>
       <td><%= recipe.servings %></td>
       <td><%= recipe.time %></td>
-      <td><%= recipe.ingredients %></td>
-      <td><%= recipe.method %></td>
       <td><%= link_to 'Show', recipe_path(recipe) %></td>
       <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
       <td><%= link_to 'Destroy', recipe_path(recipe),
