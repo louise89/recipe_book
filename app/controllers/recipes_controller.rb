@@ -9,10 +9,13 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+  #  @recipe_ingredient = RecipeIngredient.find(params[:id])
+#  @ingredient = Ingredient.find(params[:id])
   end
 
   def new
     @recipe = Recipe.new
+    @ingredient = Ingredient.new(params[:ingredient])
   end
 
   def edit
@@ -20,7 +23,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(recipe_params)
+    @recipe = Recipe.create(recipe_params)
 
     if @recipe.save
       redirect_to @recipe

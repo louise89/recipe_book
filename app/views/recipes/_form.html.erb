@@ -27,6 +27,8 @@
     <%= form.text_field :time %>
   </p>
 
+<%= form.collection_select(:ingredient_id, Ingredient.all, :id, :ingredient) %>
+
   <p>
     <%= form.submit %>
   </p>
