@@ -15,7 +15,7 @@
 
 <p>
   <strong>Ingredients:</strong>
-  <%= collection_select(:recipe, :ingredient_id, Ingredient.all, :id, :ingredient) %>
+  <%= @recipe.ingredient_name %>
 </p>
 
 <%= link_to 'Back', recipes_path %>
