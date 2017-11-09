@@ -15,7 +15,16 @@
 
 <p>
   <strong>Ingredients:</strong>
-  <%= @recipe.ingredient_name %>
+  <% @recipe.ingredient_name.each do |name| %>
+  <ul><%= name %> </ul>
+  <%end%>
+</p>
+
+<p>
+  <strong>Methods Used:</strong>
+  <% @recipe.cooking_method_name.each do |name| %>
+  <ul><%= name %> </ul>
+  <%end%>
 </p>
 
 <%= link_to 'Back', recipes_path %>
